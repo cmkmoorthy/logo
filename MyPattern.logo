@@ -1,0 +1,23 @@
+to MyStep
+fd 10
+lt :SIZE
+fd 200
+bk 200
+rt :SIZE
+end
+
+to MyPattern
+cs
+fd 200
+bk 10
+rt 175
+fd 200
+bk 200
+rt 5
+MAKE "SIZE 10
+MyStep
+repeat 20[MAKE "SIZE :SIZE + 5
+MyStep]
+
+ht
+end
